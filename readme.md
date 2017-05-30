@@ -4,8 +4,8 @@ nous allons installer ensemble un noeud spécialisé currency-monit minimaliste,
 
 ## Installer Node.js et Yarn
 
-Nous avosn besoin de `nodejs` et `yarn`, voici comment faire sous linux* :
-_*les utilisateurs de systèmes privateurs trouverons de l'aide ici :_ https://github.com/duniter/duniter/blob/master/doc/contribute-french.md#niveau-ii--ex%C3%A9cuter-les-tests-unitaires
+Nous avons besoin de `nodejs` et `yarn`, voici comment faire sous linux/mac* :
+_*les utilisateurs de windows trouverons de l'aide ici :_ https://github.com/duniter/duniter/blob/master/doc/contribute-french.md#sous-windows
 
 ### Sous Linux / MacOS
 
