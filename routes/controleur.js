@@ -88,14 +88,14 @@ module.exports = (req, res, next) => co(function *() {
 </select> <select name="massByMembers">
   <option name="massByMembers" value ="yes">mass by members
   <option name="massByMembers" value ="no" ${massByMembers == 'no' ? 'selected' : ''}>total mass
-</select>,
-	description: ``,
+</select>`,
+	description: '',
         chart: {
           type: 'bar',
           data: {
             labels: tabCurrency.map( item=> item.dateTime ),
             datasets: [{
-              label: `#${unit == "relative" ? "DUğ1" : 'Ğ1'}${massByMembers == "yes" ? '/member' : ''}`,
+              label: (unit == "relative") ? "DUğ1" : 'Ğ1'+(massByMembers == "yes") ? '/member' : '',
               data: unit == 'quantitative' 
                 ? tabCurrency.map( item=>
                     massByMembers == "no" 
@@ -113,7 +113,7 @@ module.exports = (req, res, next) => co(function *() {
           options: {
             title: {
               display: true,
-              text: `${unit == "relative" ? "DUğ1" : 'Ğ1'} Monetary Mass ${massByMembers == "yes" ? 'by members ' : ''}in the range #${begin}-#${end  }`
+              text: (unit == "relative") ? "DUğ1" : 'Ğ1'+' Monetary Mass '+(massByMembers == "yes") ? 'by members ' : ''+'in the range #'+begin+'-#'+end
             },
             legend: {
               display: false
@@ -135,6 +135,6 @@ module.exports = (req, res, next) => co(function *() {
     
   } catch (e) {
     // En cas d'exception, afficher le message
-    res.status(500).send(`<pre>${e.stack || e.message}</pre>`);
+    res.status(500).send('<pre>'+(e.stack || e.message)+'</pre>');
   }
 })
