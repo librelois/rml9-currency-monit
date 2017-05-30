@@ -1,14 +1,39 @@
 # Currency-Monit
 
-Requires Node.js v6
+Nécessite Node.js v6
+
+## Installer Node.js et Yarn
+
+### Sous Linux / MacOS
+
+Installer Node.js est devenu extrêmement simple pour ces OS : un outil vous permet d'installer la version de Node.js que vous souhaitez, en changer quand vous voulez et sans conflit avec une version précédente : il s'agit de nvm.
+
+Vous pouvez installer nvm avec la commande suivante :
+
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
+    
+Fermez puis rouvrez votre terminal, comme indiqué. Puis, installez Node.js (choisissez la version 6) :
+
+    nvm install 6
+    
+Vous aurez alors la dernière version de Node.js prête à l'emploi.
+
+Nous aurons également besoin de yarn :
+
+    sudo apt-get install yarn
+
+#### Outils de build
+
+Attention : il est nécessaire d'avoir `g++` ainsi que `python` d'installés ainsi que d'autres librairies de compilation. Sur Ubuntu/Debian, il existe un paquet installant ces différents utilitaires : installez-le avec la commande :
+
+    sudo apt-get install build-essential
 
 ## Installation
 
-    git clone https://github.com/librelois/duniter-currency-monit.git
-    cd duniter-currency-monit
-    npm install
+    git clone https://github.com/librelois/rml9-currency-monit.git
+    cd rml9-currency-monit && yarn
     node index.js config --autoconf
     node index.js sync g1.duniter.org 10901
     node index.js currency-monit
 
-Then, visit http://localhost:10501.
+Puis, visitez http://localhost:10500.
